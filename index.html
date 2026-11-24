@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11131a">
+  <meta name="description" content="Discover academic talks, workshops and presentations. Browse events and reserve your seat.">
+  <title>CampusPulse</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logoo.png" width="70" height="40" alt="">
+        <span>CampusPulse</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="admin.html">Admin</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="attendance.html">Attendance</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="certificate.html">Certificate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <figure class="hero-photo" data-slot="hero" data-alt="A fog-filled valley at dusk">
+        <img src="assets/images/lpu-jalandhar-360559.webp" srcset="assets/images/lpu-jalandhar-360559.webp" sizes="100vw" width="1920" height="1254" alt="Sea of fog filling a valley below dark hills at sunset" fetchpriority="high">
+      </figure>
+      <div class="hero-copy">
+        <h1 id="hero-title">Find your next event.</h1>
+        <p class="lead">Choose a talk, workshop or presentation, then reserve your seat.</p>
+        <div class="actions">
+          <a class="btn" href="events.html">Browse events</a>
+          <a class="btn btn-ghost" href="register.html">Register</a>
+        </div>
+      </div>
+
+      <aside class="event-stage" aria-label="Featured sample event">
+        <div class="event-stage-head">
+          <span>Featured sample event</span>
+          <strong>Filling fast</strong>
+        </div>
+        <div class="event-stage-body">
+          <h2>Tech Talk: AI in Education</h2>
+          <dl>
+            <div>
+              <dt>Date</dt>
+              <dd><time datetime="2026-10-30">30 Oct 2026</time></dd>
+            </div>
+            <div>
+              <dt>Time</dt>
+              <dd>11:00 AM</dd>
+            </div>
+            <div>
+              <dt>Venue</dt>
+              <dd>Seminar Hall A</dd>
+            </div>
+            <div>
+              <dt>Seats left</dt>
+              <dd id="snapshot"></dd>
+            </div>
+          </dl>
+          <a class="btn btn-small" href="register.html">Register for this event</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="upcoming" data-event-browser aria-labelledby="upcoming-title">
+      <div class="section-head">
+        <h2 id="upcoming-title">Sample event schedule</h2>
+        <p>Browse sample events, check seat availability, and open the registration flow.</p>
+      </div>
+      <div class="event-tools">
+        <div class="event-filters" role="group" aria-label="Filter events by type">
+          <button class="event-filter is-selected" type="button" data-event-filter="all" aria-pressed="true">All events</button>
+          <button class="event-filter" type="button" data-event-filter="talk" aria-pressed="false">Talks</button>
+          <button class="event-filter" type="button" data-event-filter="workshop" aria-pressed="false">Workshops</button>
+          <button class="event-filter" type="button" data-event-filter="research" aria-pressed="false">Research</button>
+        </div>
+        <label class="event-search">
+          <span class="visually-hidden">Search event titles, details, or venues</span>
+          <input id="event-search" type="search" autocomplete="off" placeholder="Search events or venues" aria-controls="event-grid">
+        </label>
+      </div>
+      <p class="event-results" id="event-results" role="status" aria-live="polite"></p>
+      <div class="card-grid" id="event-grid">
+        <article class="card" data-event-type="talk">
+          <h3>Tech Talk: AI in Education</h3>
+          <span class="badge badge-few">Filling fast</span>
+          <p class="meta"><time datetime="2026-10-30T11:00">30 Oct 2026 at 11:00 AM</time><br>Seminar Hall A</p>
+          <p>A guest lecture on how AI tools are changing the way students learn and teachers teach.</p>
+          <p class="seats">28 of 100 seats left</p>
+          <div class="bar" data-level="fast" role="img" aria-label="72 percent of seats filled"><span style="width:72%"></span></div>
+          <a class="btn" href="register.html">Register</a>
+        </article>
+        <article class="card" data-event-type="workshop">
+          <h3>Python Workshop for Beginners</h3>
+          <span class="badge badge-full">Full</span>
+          <p class="meta"><time datetime="2026-11-03T10:00">3 Nov 2026 at 10:00 AM</time><br>Computer Lab 2</p>
+          <p>Hands-on session on variables, loops and small programs. Bring your laptop.</p>
+          <p class="seats">All 40 seats are taken</p>
+          <div class="bar" data-level="full" role="img" aria-label="100 percent of seats filled"><span style="width:100%"></span></div>
+          <button class="btn" type="button" disabled>Registration closed</button>
+        </article>
+        <article class="card" data-event-type="research">
+          <h3>Research Paper Presentation</h3>
+          <span class="badge badge-open">Open</span>
+          <p class="meta"><time datetime="2026-11-08T14:00">8 Nov 2026 at 2:00 PM</time><br>Room 204</p>
+          <p>Students present short research papers and get feedback from faculty.</p>
+          <p class="seats">35 of 60 seats left</p>
+          <div class="bar" data-level="ok" role="img" aria-label="42 percent of seats filled"><span style="width:42%"></span></div>
+          <a class="btn" href="register.html">Register</a>
+        </article>
+      </div>
+      <p class="event-empty" id="event-empty" hidden>No events match that search. Try another topic or keyword.</p>
+      <p class="more"><a href="events.html">See all events</a></p>
+    </section>
+
+    <section id="how" aria-labelledby="how-title">
+      <div class="section-head">
+        <h2 id="how-title">From discovery to attendance.</h2>
+        <p>One place to find an event, save your seat and keep track of what comes next.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Find an event</h3><p>Browse the schedule and check the remaining seats.</p></li>
+        <li><h3>Register</h3><p>Choose an open event and submit your details.</p></li>
+        <li><h3>Get ready</h3><p>Keep the event time and venue handy.</p></li>
+        <li><h3>Check in</h3><p>Attendance is recorded for registered participants.</p></li>
+        <li><h3>Follow up</h3><p>Share feedback and view available reports or certificates.</p></li>
+      </ol>
+    </section>
+
+    <section id="links" aria-labelledby="links-title">
+      <div class="section-head">
+        <h2 id="links-title">Academic event tools</h2>
+        <p>Go directly to the system area you need.</p>
+      </div>
+      <ul class="link-list">
+        <li><a href="events.html">Browse the event schedule</a></li>
+        <li><a href="register.html">Register for an event</a></li>
+        <li><a href="admin.html">Manage events</a></li>
+        <li><a href="attendance.html">Record attendance</a></li>
+        <li><a href="feedback.html">Submit event feedback</a></li>
+        <li><a href="reports.html">View reports</a></li>
+        <li><a href="certificate.html">View certificates</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Make room for ideas.</strong>
+        <p>CampusPulse</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="events.html">Events</a>
+        <a href="register.html">Register</a>
+        <a href="admin.html">Admin</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="reports.html">Reports and certificates</a>
+      </nav>
+      <p class="footer-colophon">&copy; 2026 CampusPulse. College project built with HTML, CSS and basic JavaScript.</p>
+    </div>
+  </footer>
+
+  <script>
+    const eventName = "Tech Talk: AI in Education";
+    const seatLimit = 100;
+    const registered = 72;
+    const registrationOpen = true;
+    const seatsLeft = seatLimit - registered;
+    const percentFilled = (registered / seatLimit) * 100;
+
+    document.getElementById("snapshot").textContent =
+      eventName + " has " + seatsLeft + " of " + seatLimit + " seats left (" + percentFilled + "% filled).";
+  </script>
+  <script src="assets/js/event-filters.js" defer></script>
+</body>
+</html>
+
+
+

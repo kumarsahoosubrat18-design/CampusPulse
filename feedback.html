@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | CampusPulse</title>
+  <meta name="description" content="Submit feedback after an academic event.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logoo.png" width="40" height="40" alt="Event system logo">
+        <span>CampusPulse</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="admin.html">Admin</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="attendance.html">Attendance</a></li>
+          <li><a href="feedback.html" aria-current="page">Feedback</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="certificate.html">Certificate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Event Feedback</h1>
+    <p class="lead">Tell us how the event was. Your feedback helps organisers plan better events.</p>
+
+    <div class="two-col two-col-wide">
+      <form class="panel" action="thanks.html" method="get">
+        <div class="form-grid">
+          <div class="field">
+            <label class="required" for="fb-roll">Roll number</label>
+            <input type="text" id="fb-roll" name="roll" placeholder="e.g. 12600102" required pattern="[0-9]{8}" title="Enter an 8-digit roll number">
+          </div>
+          <div class="field">
+            <label class="required" for="fb-event">Event attended</label>
+            <select id="fb-event" name="event" required>
+              <option value="">Select an event</option>
+              <option>Freshers Orientation</option>
+              <option>Web Basics Workshop</option>
+              <option>Quiz Contest</option>
+            </select>
+          </div>
+          <fieldset class="field wide">
+            <legend>Rating *</legend>
+            <div class="choices">
+              <div class="choice"><input type="radio" id="r1" name="rating" value="1" required><label for="r1">1 Poor</label></div>
+              <div class="choice"><input type="radio" id="r2" name="rating" value="2"><label for="r2">2 Fair</label></div>
+              <div class="choice"><input type="radio" id="r3" name="rating" value="3"><label for="r3">3 Good</label></div>
+              <div class="choice"><input type="radio" id="r4" name="rating" value="4"><label for="r4">4 Very good</label></div>
+              <div class="choice"><input type="radio" id="r5" name="rating" value="5"><label for="r5">5 Excellent</label></div>
+            </div>
+          </fieldset>
+          <fieldset class="field wide">
+            <legend>Would you recommend this event?</legend>
+            <div class="choices">
+              <div class="choice"><input type="radio" id="rec-yes" name="recommend" value="yes" checked><label for="rec-yes">Yes</label></div>
+              <div class="choice"><input type="radio" id="rec-no" name="recommend" value="no"><label for="rec-no">No</label></div>
+            </div>
+          </fieldset>
+          <div class="field wide">
+            <label class="required" for="comments">Comments</label>
+            <textarea id="comments" name="comments" rows="4" required minlength="10" maxlength="300" placeholder="Write at least 10 characters"></textarea>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">Submit feedback</button>
+          <button class="btn btn-ghost" type="reset">Clear form</button>
+        </div>
+      </form>
+
+      <aside aria-labelledby="recent">
+        <h2 id="recent">Recent feedback</h2>
+        <blockquote>
+          <p>The workshop was well organised and the examples were easy to follow.</p>
+          <footer><small>Ananya Gupta, Web Basics Workshop, 5 out of 5</small></footer>
+        </blockquote>
+        <blockquote>
+          <p>Good questions in the quiz, but we needed more time to answer.</p>
+          <footer><small>Kabir Singh, Quiz Contest, 4 out of 5</small></footer>
+        </blockquote>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 CampusPulse. College project built with HTML, CSS and basic JavaScript. All data shown is sample data.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+

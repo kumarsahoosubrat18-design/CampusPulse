@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | CampusPulse</title>
+  <meta name="description" content="Browse academic events and available seats.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logoo.png" width="40" height="40" alt="Event system logo">
+        <span>CampusPulse</span>
+      </a>
+      <nav aria-label="Main menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
+          <li><a href="admin.html">Admin</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="attendance.html">Attendance</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="certificate.html">Certificate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Events</h1>
+    <p class="lead">All published events. Each event has a seat limit. When the last seat is taken, registration closes automatically.</p>
+
+    <section data-event-browser aria-labelledby="list">
+      <h2 id="list">Sample event schedule</h2>
+      <p class="lead">Filter by topic or search event names and venues. The schedule uses sample data.</p>
+      <div class="event-tools">
+        <div class="event-filters" role="group" aria-label="Filter events by type">
+          <button class="event-filter is-selected" type="button" data-event-filter="all" aria-pressed="true">All events</button>
+          <button class="event-filter" type="button" data-event-filter="talk" aria-pressed="false">Talks</button>
+          <button class="event-filter" type="button" data-event-filter="workshop" aria-pressed="false">Workshops</button>
+          <button class="event-filter" type="button" data-event-filter="research" aria-pressed="false">Research</button>
+        </div>
+        <label class="event-search">
+          <span class="visually-hidden">Search event titles, details, or venues</span>
+          <input id="event-search" type="search" autocomplete="off" placeholder="Search events or venues" aria-controls="event-grid">
+        </label>
+      </div>
+      <p class="event-results" id="event-results" role="status" aria-live="polite"></p>
+      <div class="card-grid" id="event-grid">
+      <article class="card" data-event-type="talk">
+        <h3>Tech Talk: AI in Education</h3>
+        <span class="badge badge-few">Filling fast</span>
+        <p class="meta"><time datetime="2026-10-30">30 Oct 2026</time> at 11:00 AM<br>Seminar Hall A</p>
+        <p>A guest lecture on how AI tools are changing the way students learn and teachers teach.</p>
+        <p class="seats">28 of 100 seats left</p>
+        <div class="bar" data-level="fast" role="img" aria-label="72 percent of seats filled"><span style="width:72%"></span></div>
+        <a class="btn" href="register.html">Register</a>
+      </article>
+      <article class="card" data-event-type="workshop">
+        <h3>Python Workshop for Beginners</h3>
+        <span class="badge badge-full">Full</span>
+        <p class="meta"><time datetime="2026-11-03">3 Nov 2026</time> at 10:00 AM<br>Computer Lab 2</p>
+        <p>Hands-on session on variables, loops and small programs. Bring your laptop.</p>
+        <p class="seats">All 40 seats are taken</p>
+        <div class="bar" data-level="full" role="img" aria-label="100 percent of seats filled"><span style="width:100%"></span></div>
+        <button class="btn" type="button" disabled>Registration closed</button>
+      </article>
+      <article class="card" data-event-type="research">
+        <h3>Research Paper Presentation</h3>
+        <span class="badge badge-open">Open</span>
+        <p class="meta"><time datetime="2026-11-08">8 Nov 2026</time> at 2:00 PM<br>Room 204</p>
+        <p>Students present short research papers and get feedback from faculty.</p>
+        <p class="seats">35 of 60 seats left</p>
+        <div class="bar" data-level="ok" role="img" aria-label="42 percent of seats filled"><span style="width:42%"></span></div>
+        <a class="btn" href="register.html">Register</a>
+      </article>
+      <article class="card" data-event-type="talk">
+        <h3>Career Guidance Seminar</h3>
+        <span class="badge badge-open">Open</span>
+        <p class="meta"><time datetime="2026-11-15">15 Nov 2026</time> at 12:00 PM<br>Main Auditorium</p>
+        <p>Industry speakers explain internships, resumes and interview preparation.</p>
+        <p class="seats">80 of 200 seats left</p>
+        <div class="bar" data-level="ok" role="img" aria-label="60 percent of seats filled"><span style="width:60%"></span></div>
+        <a class="btn" href="register.html">Register</a>
+      </article>
+      </div>
+      <p class="event-empty" id="event-empty" hidden>No events match that search. Try another topic or keyword.</p>
+    </section>
+
+    <section aria-labelledby="legend">
+      <h2 id="legend">Status labels</h2>
+      <dl class="defs">
+        <dt><span class="badge badge-open">Open</span></dt>
+        <dd>Plenty of seats are available.</dd>
+        <dt><span class="badge badge-few">Filling fast</span></dt>
+        <dd>Less than 30% of the seats are left.</dd>
+        <dt><span class="badge badge-full">Full</span></dt>
+        <dd>No seats left. The register button is disabled.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 CampusPulse. College project built with HTML, CSS and basic JavaScript. All data shown is sample data.</p>
+    </div>
+  </footer>
+  <script src="assets/js/event-filters.js" defer></script>
+</body>
+</html>
+
+
+
